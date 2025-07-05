@@ -1,0 +1,18 @@
+<?php
+
+include 'passwordlib.php';
+// Question 3.1
+
+   $password = 'Qwerty12345!0';
+
+   $hash = password_hash($password, PASSWORD_BCRYPT);
+    
+   echo $hash;
+
+   if (password_verify($password, $hash)) {
+    echo 'ok,  its the same password';
+   } else {
+    echo 'not ok,  its not the same password';
+   }
+   
+?>
